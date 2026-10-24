@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
   
   // write some data
   QList<QString> msg;
-  msg << "This is a test. This is only a test.");
+  msg << "This is a test. This is only a test.";
   out << msg;
 
   if (out.status() != QDataStream::Ok) {
