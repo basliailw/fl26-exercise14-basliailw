@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
   out.setVersion(QDataStream::Qt_5_0);
   
   // write some data
-  QList<QString> messages;
-  messages << "This is a test. This is only a test.")
+  QList<QString> msg;
+  msg << "This is a test. This is only a test.");
   out << msg;
 
   if (out.status() != QDataStream::Ok) {
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
   
   // notify the user that we're finished
   qDebug() << "A data stream has been written to a file.";  
-  for (const QString &s : messages)
+  for (const QString &s : msg)
     qDebug() << " " << s;
   
   return EXIT_SUCCESS;
